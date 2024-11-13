@@ -11,7 +11,7 @@ if st.button("Classify"):
     if user_input :
         data =[user_input]
         vecr = cv.transform(data).toarray()
-        pred =model.predict(vact)
+        pred =model.predict(vecr)
         if pred[0]==0:
             st.suceess["This email is not spam"]
         else:
